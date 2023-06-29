@@ -141,7 +141,7 @@ app.get('/post/:id', async (req,res) => {
 
 app.listen(4000, async () => {
   await mongoose.connect(
-    "mongodb+srv://satyam61101:uvtlIv3oQHAWfvPJ@cluster0.14lkzzl.mongodb.net/?retryWrites=true&w=majority"
+    process.env.mongoDBURL;
   );
   console.log("database connected");
 });
